@@ -55,6 +55,7 @@
             pkgs.htop
             pkgs.stats
             pkgs.uv
+            pkgs.ruff
             pkgs.bat
             pkgs.colorls
             pkgs.amazon-q-cli
@@ -69,6 +70,7 @@
               "postgresql@18"
               "python@3.13"
               "python@3.14"
+              "pyright"
             ];
             masApps = {
               "Whatsapp" = 310633997;
@@ -143,12 +145,7 @@
             pkgs.lib.mkForce ''
               echo "writing zshrc to ${home}/.zshrc" >&2
 
-              mkdir -p ${home}
-              if [ -f $${home}/.zshrc ]; then
-                cp -a ${home}/.zshrc ${home}/.zshrc.nixbak-$(date +%s) 2>/dev/null || true
-              fi
               cat > ${home}/.zshrc <<'EOF'
-
               # Amazon Q pre block. Keep at the top of this file.
               [[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 
