@@ -1,0 +1,7 @@
+theme = "horizon-dark"
+
+[editor]
+end-of-line-diagnostics = "hint"
+
+[editor.file-picker]
+hidden = false

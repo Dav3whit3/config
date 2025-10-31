@@ -1,0 +1,15 @@
+[[language]]
+name = "python"
+language-id = "python"
+auto-format = true
+language-servers = ["pyright", "ruff"]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "standard"
+reportGeneralTypeIssues = "information"
+diagnosticMode = "workspace"
+reportUnusedImport = "information"
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--config ./pyproject.toml"]
