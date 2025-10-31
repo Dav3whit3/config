@@ -9,8 +9,8 @@
   nix-shell -p neofetch --run neofetch
 
   3.- Install nix-darwin
-  sudo -E nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config#m2pro
-  sudo darwin-rebuild switch --flake ~/.config#m2pro
+  sudo -E nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix#m2pro
+  sudo darwin-rebuild switch --flake ~/.config/nix#m2pro
 */
 
 {
@@ -97,8 +97,8 @@
           system.defaults = {
             dock.persistent-apps = [
               "/Applications/Google\ Chrome.app/"
+              "/Applications/Ghostty.app/"
               "${pkgs.vscode}/Applications/Visual Studio Code.app"
-              "${pkgs.iterm2}/Applications/Ghostty.app"
               "${pkgs.slack}/Applications/Slack.app"
             ];
             finder.FXPreferredViewStyle = "clmv";
@@ -144,14 +144,15 @@
               echo "writing zshrc to ${home}/.zshrc" >&2
 
               mkdir -p ${home}
-              if [ -f ${home}/.zshrc ]; then
+              if [ -f $${home}/.zshrc ]; then
                 cp -a ${home}/.zshrc ${home}/.zshrc.nixbak-$(date +%s) 2>/dev/null || true
               fi
               cat > ${home}/.zshrc <<'EOF'
 
               # Amazon Q pre block. Keep at the top of this file.
-              [[ -f "\${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "\${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+              [[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 
+              eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
               # Add Zig programming language to PATH
               export PATH=$PATH:~/.zig
@@ -164,7 +165,7 @@
               alias ls='colorls -lA --sd'
 
               # Amazon Q post block. Keep at the bottom of this file.
-              [[ -f "\${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "\${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+              [[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
               EOF
 
               chown ${config.system.primaryUser}:staff ${home}/.zshrc || true
@@ -314,8 +315,8 @@
                 // Python
                 "python.languageServer": "Default",
                 "python.analysis.typeCheckingMode": "basic",
-                "python.envFile": "${workspaceFolder}/api/.env",
-                "python.analysis.extraPaths": ["${workspaceFolder}/api"],
+                "python.envFile": "$${workspaceFolder}/api/.env",
+                "python.analysis.extraPaths": ["$${workspaceFolder}/api"],
 
                 "terminal.integrated.enableMultiLinePasteWarning": "never",
                 "zenMode.hideLineNumbers": false,
