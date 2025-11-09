@@ -1,7 +1,7 @@
 {
   inputs,
   outputs,
-  stateVersion,
+  # stateVersion,
   ...
 }:
 {
