@@ -13,7 +13,6 @@
     }:
     let
       inherit (inputs.nixpkgs) lib;
-      unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
     in
     inputs.nix-darwin.lib.darwinSystem {
       specialArgs = {
@@ -21,21 +20,11 @@
           system
           inputs
           username
-          unstablePkgs
           ;
       };
       #extraSpecialArgs = { inherit inputs; }
       modules = [
         ../hosts/david
-        # Add nodejs overlay to fix build issues (https://github.com/NixOS/nixpkgs/issues/402079)
-        {
-          nixpkgs.overlays = [
-            (final: prev: {
-              nodejs = prev.nodejs_22;
-              nodejs-slim = prev.nodejs-slim_22;
-            })
-          ];
-        }
         inputs.home-manager.darwinModules.home-manager
         {
           networking.hostName = hostname;

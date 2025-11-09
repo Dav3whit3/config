@@ -7,7 +7,6 @@
   system,
   username,
   pkgs,
-  unstablePkgs,
   ...
 }:
 let
@@ -84,6 +83,7 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   };
 
   homebrew = {
