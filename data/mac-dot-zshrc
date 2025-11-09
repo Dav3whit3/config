@@ -1,17 +1,17 @@
-                  # Amazon Q pre block. Keep at the top of this file.
-                  [[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 
-                  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
-                  # Add Zig programming language to PATH
-                  export PATH=$PATH:~/.zig
+# Add Zig programming language to PATH
+export PATH=$PATH:~/.zig
 
-                  # BAT
-                  export BAT_THEME='gruvbox-dark'
-                  alias cat="bat --paging=never"
+# BAT
+export BAT_THEME='gruvbox-dark'
+alias cat="bat --paging=never"
 
-                  # COLORLS
-                  alias ls='colorls -lA --sd'
+# COLORLS
+alias ls='colorls -lA --sd'
 
-                  # Amazon Q post block. Keep at the bottom of this file.
-                  [[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "$${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

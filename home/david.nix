@@ -84,9 +84,9 @@
 
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    #initExtra = (builtins.readFile ../mac-dot-zshrc);
+    enableCompletion = false;
+    autosuggestion.enable = false;
+    initContent = (builtins.readFile ../data/mac-dot-zshrc);
   };
 
   programs.home-manager.enable = true;
