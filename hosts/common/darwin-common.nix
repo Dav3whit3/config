@@ -14,7 +14,7 @@ let
   inherit (inputs) nixpkgs nixpkgs-unstable;
 in
 {
-  users.users.alex.home = "/Users/david";
+  users.users.david.home = "/Users/david";
 
   nix = {
     settings = {
@@ -112,6 +112,13 @@ in
 
   # macOS configuration
   system.defaults = {
+    dock.persistent-apps = [
+      "/System/Applications/System\ Settings.app/"
+      "/Applications/Google\ Chrome.app/"
+      "/Applications/Ghostty.app/"
+      "${pkgs.vscode}/Applications/Visual Studio Code.app"
+      "${pkgs.slack}/Applications/Slack.app"
+    ];
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.AppleShowScrollBars = "Always";
     NSGlobalDomain.NSUseAnimatedFocusRing = false;
@@ -174,7 +181,7 @@ in
       };
     };
     "com.apple.dock" = {
-      autohide = false;
+      autohide = true;
       launchanim = false;
       static-only = false;
       show-recents = false;
