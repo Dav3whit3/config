@@ -78,7 +78,7 @@
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
-    settings = pkgs.lib.importTOML ./oh-my-posh/config.json;
+    settings = pkgs.lib.importJSON ./oh-my-posh/config.json;
   };
 
   programs.bash.enable = true;

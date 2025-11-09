@@ -26,8 +26,7 @@
       };
       #extraSpecialArgs = { inherit inputs; }
       modules = [
-        ../hosts/common/common-packages.nix
-        ../hosts/common/darwin-common.nix
+        ../hosts/david/default.nix
         # Add nodejs overlay to fix build issues (https://github.com/NixOS/nixpkgs/issues/402079)
         {
           nixpkgs.overlays = [

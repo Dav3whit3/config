@@ -37,19 +37,27 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    ## unstable
-    unstablePkgs.yt-dlp
-    unstablePkgs.get_iplayer
-    unstablePkgs.colmena
-
-    ## stable CLI
-    pkgs.comma
-    pkgs.hcloud
-    pkgs.just
-    pkgs.lima
+    mkalias
+    nixfmt
+    vscode
+    oh-my-posh
+    helix
+    lazygit
+    raycast
+    rectangle
+    ngrok
+    slack
+    htop
+    stats
+    uv
+    ruff
+    bat
+    colorls
+    amazon-q-cli
+    just
+    zoxide
     pkgs.nix
-    pkgs.nodejs
-    pkgs.pass
+
   ];
 
   fonts.packages = [
