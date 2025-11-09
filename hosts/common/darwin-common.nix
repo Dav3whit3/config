@@ -76,7 +76,6 @@ in
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   };
 
   homebrew = {
@@ -191,11 +190,6 @@ in
       IconType = 5;
       SortColumn = "CPUUsage";
       SortDirection = 0;
-    };
-    "com.apple.Safari" = {
-      # Privacy: don’t send search queries to Apple
-      UniversalSearchEnabled = false;
-      SuppressSearchSuggestions = true;
     };
     "com.apple.AdLib" = {
       allowApplePersonalizedAdvertising = false;
