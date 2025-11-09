@@ -1,3 +1,18 @@
+/*
+  Installation steps
+  # https://www.youtube.com/watch?v=Z8BL8mdzWHI&ab_channel=DreamsofAutonomy
+
+  1.- Install Nix
+  sh <(curl -L https://nixos.org/nix/install)
+
+  2.- Check Nix is working & install neofetch
+  nix-shell -p neofetch --run neofetch
+
+  3.- Install nix-darwin
+  sudo -E nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix#m2pro
+  sudo darwin-rebuild switch --flake ~/.config#david
+*/
+
 {
   description = "Single-file flake with nix-darwin + Home Manager for host 'david'";
 
