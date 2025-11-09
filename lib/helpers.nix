@@ -1,7 +1,6 @@
 {
   inputs,
   outputs,
-  # stateVersion,
   ...
 }:
 {
@@ -22,7 +21,6 @@
           username
           ;
       };
-      #extraSpecialArgs = { inherit inputs; }
       modules = [
         ../hosts/david
         inputs.home-manager.darwinModules.home-manager

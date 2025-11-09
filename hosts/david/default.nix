@@ -39,7 +39,6 @@ in
     mkalias
     nixfmt
     vscode
-    # ghostty
     discord
     oh-my-posh
     helix
@@ -103,7 +102,7 @@ in
       "Whatsapp" = 310633997;
       "Bitwarden" = 1352778147;
     };
-    # casks = [ ];
+    casks = [ "ghostty" ];
   };
 
   # Add ability to used TouchID for sudo authentication
