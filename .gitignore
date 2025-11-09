@@ -4,8 +4,7 @@ uv
 nvim
 neofetch
 result
-result/
-result/*
+
 com.googlecode.iterm2.plist
 .direnv
 bat
