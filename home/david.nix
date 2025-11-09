@@ -74,12 +74,12 @@
 
   programs.lf.enable = true;
 
-  #   programs.starship = {
-  #     enable = true;
-  #     enableZshIntegration = true;
-  #     enableBashIntegration = true;
-  #     settings = pkgs.lib.importTOML ./starship/starship.toml;
-  #   };
+  programs.oh-my-posh = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+    settings = pkgs.lib.importTOML ./oh-my-posh/config.json;
+  };
 
   programs.bash.enable = true;
 
