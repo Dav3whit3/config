@@ -26,7 +26,7 @@
       };
       #extraSpecialArgs = { inherit inputs; }
       modules = [
-        ../hosts/david/default.nix
+        ../hosts/david
         # Add nodejs overlay to fix build issues (https://github.com/NixOS/nixpkgs/issues/402079)
         {
           nixpkgs.overlays = [
