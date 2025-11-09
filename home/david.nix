@@ -21,7 +21,7 @@
   ...
 }:
 {
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   # list of programs
   # https://mipmip.github.io/home-manager-option-search
@@ -106,8 +106,6 @@
 
   programs.home-manager.enable = true;
   programs.nix-index.enable = true;
-
-  programs.alacritty.enable = true;
 
   programs.bat.enable = true;
   programs.bat.config.theme = "Nord";

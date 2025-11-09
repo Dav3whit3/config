@@ -39,7 +39,7 @@ in
     mkalias
     nixfmt
     vscode
-    ghostty
+    # ghostty
     discord
     oh-my-posh
     helix
