@@ -31,8 +31,6 @@
     with inputs;
     let
       inherit (self) outputs;
-
-      # stateVersion = "24.05";
       libx = import ./lib { inherit inputs outputs; };
 
     in
