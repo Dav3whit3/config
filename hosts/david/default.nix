@@ -78,6 +78,8 @@ in
       path = inputs.nixpkgs-unstable;
     };
   };
+  
+  homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
 
   homebrew = {
     enable = true;
