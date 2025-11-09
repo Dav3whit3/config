@@ -3,6 +3,14 @@ raycast
 uv
 nvim
 neofetch
+result
+result/
 result/*
 com.googlecode.iterm2.plist
 .direnv
+bat
+direnv
+git
+htop
+lf
+oh-my-posh
