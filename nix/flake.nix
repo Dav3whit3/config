@@ -82,19 +82,6 @@
             onActivation.autoUpdate = true;
           };
 
-          services.postgresql.enable = true;
-          services.postgresql.package = pkgs.postgresql_18;
-          services.postgresql.initdbArgs = [
-            "-D"
-            "/var/lib/postgresql/18"
-          ];
-          services.postgresql.authentication = pkgs.lib.mkOverride 10 ''
-            #type database  DBuser  auth-method
-            local all       all     trust
-            host  david    all     127.0.0.1/32 scram-sha-256
-            host  david    all     ::1/128 scram-sha-256
-          '';
-
           # Mac settings.
           system.defaults = {
             dock.persistent-apps = [
@@ -451,6 +438,9 @@
                   ]
                 },
                 EOF
+
+
+
 
               chown ${config.system.primaryUser}:staff "${home}/Library/Application Support/Code/User/settings.json" || true
             '';
