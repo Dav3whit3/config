@@ -56,8 +56,9 @@ in
     amazon-q-cli
     just
     zoxide
+    carapace
+    nushell
     pkgs.nix
-
   ];
 
   fonts.packages = [
@@ -78,7 +79,7 @@ in
       path = inputs.nixpkgs-unstable;
     };
   };
-  
+
   homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
 
   homebrew = {
@@ -91,6 +92,7 @@ in
     global.autoUpdate = true;
 
     brews = [
+      "tmux"
       "neovim"
       "docker"
       "redis"
@@ -102,7 +104,6 @@ in
 
     masApps = {
       "Whatsapp" = 310633997;
-      "Bitwarden" = 1352778147;
     };
     casks = [ "ghostty" ];
   };
