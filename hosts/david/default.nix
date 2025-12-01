@@ -35,6 +35,7 @@ in
     hostPlatform = lib.mkDefault "${system}";
   };
 
+  # Nix packages https://search.nixos.org/packages
   environment.systemPackages = with pkgs; [
     mkalias
     nixfmt
@@ -110,7 +111,7 @@ in
   # Add ability to used TouchID for sudo authentication
   security.pam.services.sudo_local.touchIdAuth = true;
 
-  # macOS configuration
+  # macOS configuration https://nix-darwin.github.io/nix-darwin/manual/
   system.defaults = {
     dock.persistent-apps = [
       "/System/Applications/System\ Settings.app/"
