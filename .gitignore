@@ -7,6 +7,8 @@ result
 
 oh-my-posh
 
+tmux/plugins/
+
 com.googlecode.iterm2.plist
 .direnv
 bat
