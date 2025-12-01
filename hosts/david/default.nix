@@ -48,12 +48,10 @@ in
     ngrok
     slack
     htop
-    stats
     uv
     ruff
     bat
     colorls
-    amazon-q-cli
     just
     zoxide
     carapace
@@ -100,6 +98,7 @@ in
       "python@3.13"
       "python@3.14"
       "pyright"
+      "yq"
     ];
 
     masApps = {
@@ -120,6 +119,13 @@ in
       "${pkgs.vscode}/Applications/Visual Studio Code.app"
       "${pkgs.slack}/Applications/Slack.app"
     ];
+    controlcenter = {
+      BatteryShowPercentage = true;
+      Bluetooth = true;
+      FocusModes = true;
+      NowPlaying = false;
+      Sound = true;
+    };
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.AppleShowScrollBars = "Always";
     NSGlobalDomain.NSUseAnimatedFocusRing = false;
