@@ -1,3 +1,16 @@
+# Installation steps
+# # https://www.youtube.com/watch?v=Z8BL8mdzWHI&ab_channel=DreamsofAutonomy
+
+# 1.- Install Nix
+# sh <(curl -L https://nixos.org/nix/install)
+
+# 2.- Check Nix is working & install neofetch
+# nix-shell -p neofetch --run neofetch
+
+# 3.- Install nix-darwin
+# sudo -E nix run nix-darwin -- switch --flake ~/.config#david
+# sudo darwin-rebuild switch --flake ~/.config#david
+
 # Build the system config and switch to it when running `just` with no args
 default: switch
 
