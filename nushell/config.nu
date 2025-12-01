@@ -912,17 +912,15 @@ alias ll = ls -l
 alias lt = eza --tree --level=2 --long --icons --git
 alias v = nvim
 alias hms = /nix/store/6kc5srg83nkyg21am089xx7pvq44kn2c-home-manager/bin/home-manager switch
-alias as = aerospace
-alias asr = atuin scripts run
 
 
 
 # Git
 alias gc = git commit -m
+alias gs = git status
 alias gca = git commit -a -m
 alias gp = git push origin HEAD
 alias gpu = git pull origin
-alias gst = git status
 alias glog = git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit
 alias gdiff = git diff
 alias gco = git checkout
@@ -950,8 +948,6 @@ alias ke = kubectl exec -it
 
 source ~/.config/nushell/env.nu
 source ~/.cache/carapace/init.nu
-# source ~/.local/share/atuin/init.nu
-# use ~/.cache/starship/init.nu
 
 let ruby_ver = "3.4.0"
 let gem_home = ($nu.home-path | path join ".gem" "ruby" $ruby_ver)
