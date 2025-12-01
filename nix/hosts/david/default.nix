@@ -1,4 +1,3 @@
-
 {
   inputs,
   outputs,
@@ -199,7 +198,6 @@ in
       minimize-to-application = true;
       mineffect = "scale";
       enable-window-tool = false;
-      mineffect = "scale";
     };
     "com.apple.ActivityMonitor" = {
       OpenMainWindow = true;
