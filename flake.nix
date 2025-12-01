@@ -31,7 +31,7 @@
     with inputs;
     let
       inherit (self) outputs;
-      libx = import ./lib { inherit inputs outputs; };
+      libx = import ./nix/lib { inherit inputs outputs; };
 
     in
     {

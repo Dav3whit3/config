@@ -1,0 +1,14 @@
+## ~/.config/data/mac-dot-zshrc
+export ZDOTDIR=$HOME/.config/zsh
+
+### prompt
+autoload -U promptinit; promptinit; prompt pure
+
+### path
+export PATH="$HOME/.nix-profile/bin:$HOME/.cargo/bin:$PATH"
+
+### direnv
+export DIRENV_DIR="~/.nix-profile/share/direnv/"
+
+### fzf
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
