@@ -54,6 +54,8 @@
       "--no-mouse"
     ];
   };
+
+  programs.git = {
     enable = true;
     lfs.enable = true;
     settings = {
@@ -65,6 +67,9 @@
         defaultBranch = "main";
       };
       merge = {
+        conflictStyle = "diff3";
+        tool = "meld";
+      };
       pull = {
         rebase = true;
       };
@@ -130,4 +135,3 @@
     };
   };
 }
-
