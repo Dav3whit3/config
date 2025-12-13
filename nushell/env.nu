@@ -86,7 +86,6 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-zoxide init nushell | save -f ~/.zoxide.nu
 oh-my-posh init nu --config ~/.config/oh-my-posh/config.json
 $env.BAT_THEME = 'gruvbox-dark'
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional

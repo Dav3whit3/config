@@ -1,0 +1,213 @@
+{
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    },
+    "button": false
+  },
+  "search": {
+    "button": true
+  },
+
+  "bottom_dock_layout": "contained",
+  "helix_mode": false,
+  "icon_theme": "Catppuccin Macchiato",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "ui_font_size": 18,
+  "buffer_font_size": 19.0,
+
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato"
+  },
+  "theme_overrides": {
+    "Catppuccin Macchiato": {
+      "syntax": {
+        "type": {
+          "font_style": "italic",
+          "color": "#4EC9B0"
+        },
+        "hint": {
+          "font_style": "italic",
+          "color": "#4EC9B0"
+        },
+        "boolean": {
+          "font_style": "italic",
+          "color": "#4EC9B0"
+        },
+        "comment": {
+          "color": "#6A9955"
+        },
+        "variable": {
+          "color": "#9ed8fa"
+        },
+        "property": {
+          "color": "#6F9EEF"
+        },
+        "keyword": {
+          "color": "#C586C0"
+        },
+        "function": {
+          "color": "#DCDCAA"
+        },
+        "attribute": {
+          "color": "#6f9eef"
+        },
+        "string": {
+          "color": "#CE9178"
+        }
+      }
+    }
+  },
+
+  "git_panel": {
+    "dock": "right"
+  },
+  "status_bar": {
+    "active_language_button": false,
+    "cursor_position_button": false,
+    "line_endings_button": false
+  },
+
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+
+  "base_keymap": "VSCode",
+
+  // Finder model width
+  "file_finder": {},
+
+  // NOTE: Change the font family to your preference
+  "buffer_font_family": "CaskaydiaMono Nerd Font",
+
+  // Vim mode settings
+  "tab_bar": {
+    "show": true
+  },
+
+  "scrollbar": {
+    "show": "never"
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    },
+    "branch_picker": {
+      "show_author_name": true
+    },
+    "hunk_style": "staged_hollow"
+  },
+
+  // Only show error on tab
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors"
+  },
+
+  // Indentation, rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+
+  // NOTE: Zen mode, refer https://github.com/zed-industries/zed/issues/4382 when it's resolved
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+
+  // Use Copilot Chat AI as default
+  "agent": {
+    "dock": "left",
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5-thinking"
+    },
+    "model_parameters": []
+  },
+
+  // Inlay hints preconfigured by Zed: Go, Rust, Typescript and Svelte
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": false,
+    "show_value_hints": false
+  },
+
+  // LSP
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"]
+      }
+    }
+  },
+
+  "languages": {
+    "Python": {
+      "format_on_save": "on",
+      "language_servers": ["pyright", "ruff"],
+      "formatter": { "language_server": { "name": "ruff" } }
+    }
+  },
+
+  // Use zed commit editor
+  "terminal": {
+    "button": true,
+    "font_family": ".ZedMono",
+    "font_size": 16,
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+  // File syntax highlighting
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+
+  // File scan exclusions, hide on the file explorer and search
+  "file_scan_exclusions": [
+    "**/.ipynb_checkpoints",
+    "**/__pycache__",
+    "**/__init__.py",
+    "**/.DS_Store",
+    "**/.vscode",
+    "**/dist",
+    "**/.git"
+  ],
+
+  // Move all panel to the right
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true,
+    "auto_fold_dirs": false
+  },
+
+  "outline_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left"
+  },
+
+  // Move some unnecessary panels to the left
+  "notification_panel": {
+    "dock": "left"
+  },
+
+  "debugger": {
+    "button": false
+  },
+  "autosave": "on_focus_change"
+}

@@ -16,3 +16,8 @@ direnv
 git
 htop
 lf
+
+# zed
+zed/conversations
+zed/prompts
+zed/themes

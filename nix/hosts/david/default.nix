@@ -50,11 +50,13 @@ in
     slack
     htop
     uv
+    pnpm
     ruff
+    go
+    wails
     bat
     colorls
     just
-    zoxide
     carapace
     nushell
     pkgs.nix
@@ -103,7 +105,7 @@ in
     ];
 
     masApps = {
-      "Whatsapp" = 310633997;
+      # "Whatsapp" = 310633997;
     };
     casks = [ "ghostty" ];
   };

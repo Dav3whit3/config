@@ -28,10 +28,22 @@
 
   programs.gpg.enable = true;
 
-  programs.direnv = {
+  programs.zsh = {
     enable = true;
-    nix-direnv.enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = false;
+    initContent = (builtins.readFile ../data/mac-dot-zshrc);
   };
+
+  programs.carapace = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.nushell = {
+    enable = true;
+  };
+  programs.zsh.shellAliases.nu = "nu --config ${config.home.homeDirectory}/.config/nushell/config.nu";
 
   programs.eza = {
     enable = true;
@@ -42,16 +54,6 @@
       "--group-directories-first"
       "--header"
       "--color=auto"
-    ];
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    tmux.enableShellIntegration = true;
-    defaultOptions = [
-      "--no-mouse"
     ];
   };
 
@@ -76,17 +78,10 @@
     };
   };
 
-  programs.diff-so-fancy = {
-    enable = true;
-    enableGitIntegration = true;
-  };
-
   programs.htop = {
     enable = true;
     settings.show_program_path = true;
   };
-
-  programs.lf.enable = true;
 
   programs.oh-my-posh = {
     enable = true;
@@ -97,21 +92,15 @@
 
   programs.bash.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = false;
-    autosuggestion.enable = false;
-    initContent = (builtins.readFile ../data/mac-dot-zshrc);
-  };
-
   programs.home-manager.enable = true;
   programs.nix-index.enable = true;
 
-  programs.bat.enable = true;
-  programs.bat.config.theme = "Nord";
-  #programs.zsh.shellAliases.cat = "${pkgs.bat}/bin/bat";
+  programs.bat = {
+    enable = true;
+    # config.theme = "Nord";
+  };
 
-  programs.zoxide.enable = true;
+  programs.zsh.shellAliases.cat = "${pkgs.bat}/bin/bat";
 
   programs.ssh = {
     enable = true;
@@ -120,7 +109,7 @@
       StrictHostKeyChecking no
     '';
     matchBlocks = {
-      # ~/.ssh/config
+
       "*" = {
         user = "root";
         extraOptions = {
