@@ -60,7 +60,12 @@ in
     carapace
     nushell
     pkgs.nix
+    darwin.libresolv
   ];
+
+  environment.variables = {
+    SDKROOT = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk";
+  };
 
   fonts.packages = [
     pkgs.nerd-fonts.fira-code

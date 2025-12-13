@@ -1,3 +1,11 @@
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
+
+# SSH add agent forwarding for tmux
+if [ -n "$SSH_AUTH_SOCK" ] && command -v tmux >/dev/null 2>&1; then
+  tmux set-environment -g SSH_AUTH_SOCK "$SSH_AUTH_SOCK" 2>/dev/null || true
+fi
+
+# Use system clang for CGO (needed for Wails/Go linking on macOS)
+export CC=/usr/bin/clang

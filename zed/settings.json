@@ -209,5 +209,9 @@
   "debugger": {
     "button": false
   },
-  "autosave": "on_focus_change"
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 0
+    }
+  }
 }
