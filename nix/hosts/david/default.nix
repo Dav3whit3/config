@@ -124,6 +124,7 @@ in
       "/System/Applications/System\ Settings.app/"
       "/Applications/Google\ Chrome.app/"
       "/Applications/Ghostty.app/"
+      "/Applications/Zed.app/"
       "${pkgs.vscode}/Applications/Visual Studio Code.app"
       "${pkgs.slack}/Applications/Slack.app"
     ];
