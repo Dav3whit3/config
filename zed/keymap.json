@@ -23,5 +23,47 @@
     "bindings": {
       "f1": "command_palette::Toggle"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-t": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-t": "editor::Transpose"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-cmd-t": "editor::Transpose"
+    }
+  },
+  {
+    "context": "Global",
+    "bindings": {
+      "ctrl+t": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-t": "editor::Transpose"
+    }
+  },
+  {
+    "context": "Global",
+    "bindings": {
+      "alt-shift-t": "editor::Transpose"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-t": "editor::Transpose"
+    }
   }
 ]
