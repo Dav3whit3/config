@@ -89,5 +89,5 @@ $env.NU_PLUGIN_DIRS = [
 oh-my-posh init nu --config ~/.config/oh-my-posh/config.json
 $env.BAT_THEME = 'gruvbox-dark'
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-mkdir ~/.cache/carapace
-carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+# mkdir ~/.cache/carapace
+# carapace _carapace nushell | save --force ~/.cache/carapace/init.nu

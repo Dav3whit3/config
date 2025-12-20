@@ -35,10 +35,10 @@
     initContent = (builtins.readFile ../data/mac-dot-zshrc);
   };
 
-  programs.carapace = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  # programs.carapace = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  # };
 
   programs.nushell = {
     enable = true;

@@ -947,7 +947,7 @@ alias kl = kubectl logs -f
 alias ke = kubectl exec -it
 
 source ~/.config/nushell/env.nu
-source ~/.cache/carapace/init.nu
+# source ~/.cache/carapace/init.nu
 
 let ruby_ver = "3.4.0"
 let gem_home = ($nu.home-path | path join ".gem" "ruby" $ruby_ver)

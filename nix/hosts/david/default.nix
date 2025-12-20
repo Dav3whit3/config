@@ -41,7 +41,9 @@ in
     nixfmt
     vscode
     discord
+    neovim
     oh-my-posh
+    tmux
     helix
     lazygit
     raycast
@@ -50,14 +52,21 @@ in
     slack
     htop
     uv
+    python314 # ?
+    python313
+    pyright
     pnpm
     ruff
+    yq
     go
     wails
+    postgresql_18
+    docker
+    redis
     bat
     colorls
     just
-    carapace
+    # carapace
     nushell
     pkgs.nix
     darwin.libresolv
@@ -97,21 +106,12 @@ in
     };
     global.autoUpdate = true;
 
-    brews = [
-      "tmux"
-      "neovim"
-      "docker"
-      "redis"
-      "postgresql@18"
-      "python@3.13"
-      "python@3.14"
-      "pyright"
-      "yq"
-    ];
+    brews = [ ];
 
     masApps = {
-      # "Whatsapp" = 310633997;
+      "Whatsapp" = 310633997;
     };
+
     casks = [ "ghostty" ];
   };
 
